@@ -1,21 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;500&display=swap');
+
 body {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+
+    background-color: #ffffff;
+	color: #333333;
+	margin: 0px auto 40px auto;
     padding-top: 20px;
+    width: 1000px;
+}
+
+/* Tipografía */
+h1, h2, h3 {
+    font-weight: 500;
+    text-transform: capitalize;
+}
+ 
+h1 {
+    font-size: 36px;
+    
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
 }
 
 header {
     width: 100%;
     height: 80px;
-    background-color: #4b4b4d;
+    background: url(https://source.unsplash.com/AtPWnYNDJnM/960x540);
+    background-size: cover;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 h1 {
-    background-color: #d2d3d5;
+    color:#fff;
     height: 50px;
     width: 200px;
     margin: 15px;
@@ -24,17 +52,17 @@ h1 {
 nav {
     display: flex;
     flex-direction: row;
-    margin: 20 0 0 20px;
 }
 
 nav a {
-    width: 40px;
-    height: 40px;
-    background-color: #d2d3d5;
-    border-radius: 50%;
+    font-size: 42px;
+    padding: 10px;
+    color:#fff;
+    text-decoration: none;
     margin: 0 10 10 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 section.top {
@@ -48,9 +76,12 @@ section.top {
 }
 
 section.top div.topbox{
-    background-color: #97989A;
+    border:#000 1px solid;
     width: 196px;
     height: 100%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
 }
 
 section.middle {
@@ -64,13 +95,46 @@ section.middle div.middlebox{
     background-color: #97989A;
     width: 328px;
     height: 100%;
+    display: grid;
+    place-items: center;
+    position:relative;
 }
+
+section.middle div.middlebox img {
+    object-fit: cover;
+    width: 328px;
+    height: 192px;
+}
+
+section.middle div.middlebox div{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 60%;
+    height:70%;
+}
+
+section.middle div.middlebox h2,
+section.middle div.middlebox button {
+    font-size: 24px;
+    text-align: center;
+    color: #ffffff;
+}
+
+div.middlebox button {
+ background-color: #000;
+ border:#ffffff 1px solid;
+ cursor: pointer;
+}
+
 
 section.bottom {
     margin-top: 24px;
     margin-bottom: 24px;
     width: 100%;
-    height: 455px;
     display: grid;
     grid-template: 25% 1fr 25%;
 }
@@ -81,20 +145,42 @@ section.bottom div.left-side {
     background-color: #858688;
     height: 100%;
     width: 100%;
+    min-width: 190px;
   }
 
   section.bottom  div.main {
     grid-column: 2 / 5;
-    background-color: #4B4B4D;
+    min-width: 620px;
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
   }
+
+  section.bottom  div.main article {
+      padding: 0 5px 5px 5px;
+      flex: 0 1 300px;
+  }
+  section.bottom  div.main article h3,
+  section.bottom  div.main article p,
+  section.bottom button {
+    margin-top: 5px;
+  }
+
+  section.bottom button {
+    background-color: #fff;
+    border:#000 1px solid;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
 
 section.bottom  div.right-side {
     grid-column: 5 / 5;
     background-color: #858688;
     height: 100%;
     width: 100%;
+    min-width: 190px;
   }
 
 
@@ -102,5 +188,8 @@ section.bottom  div.right-side {
 footer {
     width: 100%;
     height: 70px;
-    background-color: #4b4b4d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
 }
